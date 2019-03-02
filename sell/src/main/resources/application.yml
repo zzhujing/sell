@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.199.104:3306/wechat?useUnicode=true&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 192.168.199.104
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+      format_sql: true
+      show_sql: true
+  freemarker:
+    cache: false
+server:
+  servlet:
+    context-path: /sell
+wx:
+  info:
+    appID: wxab43b176547c1aa9
+    secret: c79a0be195165ad151e55f87bd860cd8
+    app-open-id: wx6ad144e54af67d87
+    open-secret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+    templateId:
+      orderStatus: 0Meh9feADjkiR8Ryl0d_a0IXQj0UBqL--2XsmPmTwEA
+pay:
+  info:
+    app-id: wxd898fcb01713c658
+    mch-id: 1483469312
+    mch-key: C5245D70627C1F8E9964D494B0735025
+    key-path: e:/h5.p12
+    notify-url: http://sell-hujing.natapp1.cc/sell/pay/notify|
+project:
+  url:
+    wechatMpAuthorize: http://sell-hujing.natapp1.cc
+    wechatOpenAuthorize: http://sell-hujing.natapp1.cc
+    sell: http://sell-hujing.natapp1.cc
+    wechatOpenReturnUrl: http://sell-hujing.natapp1.cc/sell/seller/login
